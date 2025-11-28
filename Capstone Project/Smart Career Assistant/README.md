@@ -47,7 +47,8 @@ Automatically feed extracted text into the Agent.
 
 **📂 Project Structure**
 
-
+```
+📂 Project Structure
 ├── Skill Extractor (Python Function)
 ├── Smart Career Agent Setup
 │   ├── Gemini Model
@@ -59,6 +60,8 @@ Automatically feed extracted text into the Agent.
 │   ├── Salary Checker
 │   ├── Cover Letter Generator
 └── PDF Resume Upload Tools
+```
+
 
 **🛠️ Technologies Used**
 
