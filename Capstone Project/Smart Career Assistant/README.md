@@ -65,56 +65,56 @@ Automatically feed extracted text into the Agent.
 
 **🛠️ Technologies Used**
 
-Python
 
-Google ADK (Agents Development Kit)
-
-Google Gemini 2.5 Flash Lite
-
-google_search tool
-
-pdfplumber (PDF text extraction)
-
-Kaggle Notebook environment
+- Python  
+- Google ADK (Agents Development Kit)  
+- Google Gemini 2.5 Flash Lite  
+- google_search tool  
+- pdfplumber (PDF text extraction)  
+- Kaggle Notebook environment  
 
 **📘 How It Works**
 
 **Step 1 — Load API Key**
 
 Use Kaggle Secrets:
-
+'''
 client = UserSecretsClient()
 GOOGLE_API_KEY = client.get_secret("GOOGLE_API_KEY")
+'''
 
 **Step 2 — Create the SmartCareer Agent**
-
+'''
 root_agent = Agent(
     name="smart_career_agent",
     model=Gemini(model="gemini-2.5-flash-lite", retry_options=retry_config),
     instruction=career_instruction,
     tools=[google_search]
 )
+'''
 
 **Step 3 — Run Queries**
 
 Example:
-
+'''
 response = await ask_agent("What skills do I need for a junior data scientist role?")
+'''
 
 **Step 4 — Resume Upload Workflow**
 
-Upload PDF to /kaggle/input/...
+-Upload PDF to /kaggle/input/...
 
-Extract text with pdfplumber
+-Extract text with pdfplumber
 
-Process with the AI agent
+-Process with the AI agent
 
 
 **📑 Skill Extraction Logic**
 
 The project includes a local Python tool:
-
+'''
 SKILLS_DB = ["python", "sql", "aws", "tableau", ...]
+'''
 
 
 It finds all matching skills inside the resume text.
@@ -139,9 +139,10 @@ The notebook includes demonstrations for:
 **📄 PDF Resume Processing**
 
 Upload PDF → Extract Text → Analyze with AI Agent.
-
+'''
 resume_path = "/kaggle/input/.../resume.pdf"
 resume_text = load_resume_from_pdf(resume_path)
+'''
 
 **🔮 Future Improvements**
 
