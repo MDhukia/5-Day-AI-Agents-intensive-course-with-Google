@@ -7,43 +7,43 @@ It analyzes resumes, extracts skills, retrieves real-time job market information
 
 **✅ 1. AI Career Assistant Agent**
 
-Built using google.adk.agents.Agent.
+- Built using google.adk.agents.Agent.
 
-Uses Gemini 2.5 Flash Lite model.
+- Uses Gemini 2.5 Flash Lite model.
 
-Provides professional answers in bullet points.
+- Provides professional answers in bullet points.
 
 **✅ 2. Resume Analyzer**
 
-Extracts skills using a custom Python function.
+- Extracts skills using a custom Python function.
 
-Summarizes the resume.
+- Summarizes the resume.
 
-Suggests suitable job roles.
+- Suggests suitable job roles.
 
-Provides improvement recommendations.
+- Provides improvement recommendations.
 
 **✅ 3. Google Search Integration**
 
-Uses google_search tool for:
+- Uses google_search tool for:
 
-Skills trending in 2025
+   - Skills trending in 2025
 
-Salary insights
+   - Salary insights
 
-Market demand verification
+   - Market demand verification
 
 **✅ 4. Cover Letter Generator**
 
-Generates short, professional cover letters based on extracted skills.
+- Generates short, professional cover letters based on extracted skills.
 
 **✅ 5. PDF Resume Upload & Parsing**
 
-Upload a .pdf resume through Kaggle notebook.
+- Upload a .pdf resume through Kaggle notebook.
 
-Extract text using pdfplumber.
+- Extract text using pdfplumber.
 
-Automatically feed extracted text into the Agent.
+- Automatically feed extracted text into the Agent.
 
 **📂 Project Structure**
 
