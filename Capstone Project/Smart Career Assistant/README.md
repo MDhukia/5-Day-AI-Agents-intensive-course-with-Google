@@ -1,4 +1,4 @@
-**Smart Career Assistant — RAG + Agents Project (Google ADK + Gemini)**
+**Smart Career Assistant — Agents Project (Google ADK + Gemini)**
 
 This project implements an AI-powered Career Assistant Agent using Google ADK, Gemini 2.5 Flash, and tool calling.
 It analyzes resumes, extracts skills, retrieves real-time job market information, and generates personalized career guidance.
@@ -78,12 +78,14 @@ Automatically feed extracted text into the Agent.
 **Step 1 — Load API Key**
 
 Use Kaggle Secrets:
+
 '''
 client = UserSecretsClient()
 GOOGLE_API_KEY = client.get_secret("GOOGLE_API_KEY")
 '''
 
 **Step 2 — Create the SmartCareer Agent**
+
 '''
 root_agent = Agent(
     name="smart_career_agent",
@@ -96,6 +98,7 @@ root_agent = Agent(
 **Step 3 — Run Queries**
 
 Example:
+
 '''
 response = await ask_agent("What skills do I need for a junior data scientist role?")
 '''
@@ -112,6 +115,7 @@ response = await ask_agent("What skills do I need for a junior data scientist ro
 **📑 Skill Extraction Logic**
 
 The project includes a local Python tool:
+
 '''
 SKILLS_DB = ["python", "sql", "aws", "tableau", ...]
 '''
@@ -139,6 +143,7 @@ The notebook includes demonstrations for:
 **📄 PDF Resume Processing**
 
 Upload PDF → Extract Text → Analyze with AI Agent.
+
 '''
 resume_path = "/kaggle/input/.../resume.pdf"
 resume_text = load_resume_from_pdf(resume_path)
@@ -146,10 +151,10 @@ resume_text = load_resume_from_pdf(resume_path)
 
 **🔮 Future Improvements**
 
-Add job description matching
+-Add job description matching
 
-Add streamlit web UI
+-Add streamlit web UI
 
-Use vector database + RAG for long resumes
+-Use vector database + RAG for long resumes
 
-Build automated resume scoring system
+-Build automated resume scoring system
