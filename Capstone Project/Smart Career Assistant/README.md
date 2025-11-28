@@ -46,6 +46,7 @@ Automatically feed extracted text into the Agent.
 
 **📂 Project Structure**
 
+
 ├── Skill Extractor (Python Function)
 ├── Smart Career Agent Setup
 │   ├── Gemini Model
@@ -73,6 +74,7 @@ pdfplumber (PDF text extraction)
 Kaggle Notebook environment
 
 **📘 How It Works**
+
 **Step 1 — Load API Key**
 
 Use Kaggle Secrets:
