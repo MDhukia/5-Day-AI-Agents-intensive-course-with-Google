@@ -1,10 +1,10 @@
-#**Smart Career Assistant — RAG + Agents Project (Google ADK + Gemini)**
+**Smart Career Assistant — RAG + Agents Project (Google ADK + Gemini)**
 
 This project implements an AI-powered Career Assistant Agent using Google ADK, Gemini 2.5 Flash, and tool calling.
 It analyzes resumes, extracts skills, retrieves real-time job market information, and generates personalized career guidance.
 
 **🚀 Project Features**
-#**✅ 1. AI Career Assistant Agent**
+**✅ 1. AI Career Assistant Agent**
 
 Built using google.adk.agents.Agent.
 
@@ -12,7 +12,7 @@ Uses Gemini 2.5 Flash Lite model.
 
 Provides professional answers in bullet points.
 
-#**✅ 2. Resume Analyzer**
+**✅ 2. Resume Analyzer**
 
 Extracts skills using a custom Python function.
 
@@ -22,7 +22,7 @@ Suggests suitable job roles.
 
 Provides improvement recommendations.
 
-#**✅ 3. Google Search Integration**
+**✅ 3. Google Search Integration**
 
 Uses google_search tool for:
 
@@ -32,11 +32,11 @@ Salary insights
 
 Market demand verification
 
-#**✅ 4. Cover Letter Generator**
+**✅ 4. Cover Letter Generator**
 
 Generates short, professional cover letters based on extracted skills.
 
-#**✅ 5. PDF Resume Upload & Parsing**
+**✅ 5. PDF Resume Upload & Parsing**
 
 Upload a .pdf resume through Kaggle notebook.
 
@@ -45,6 +45,7 @@ Extract text using pdfplumber.
 Automatically feed extracted text into the Agent.
 
 **📂 Project Structure**
+
 ├── Skill Extractor (Python Function)
 ├── Smart Career Agent Setup
 │   ├── Gemini Model
@@ -72,14 +73,14 @@ pdfplumber (PDF text extraction)
 Kaggle Notebook environment
 
 **📘 How It Works**
-#**Step 1 — Load API Key**
+**Step 1 — Load API Key**
 
 Use Kaggle Secrets:
 
 client = UserSecretsClient()
 GOOGLE_API_KEY = client.get_secret("GOOGLE_API_KEY")
 
-#**Step 2 — Create the SmartCareer Agent**
+**Step 2 — Create the SmartCareer Agent**
 root_agent = Agent(
     name="smart_career_agent",
     model=Gemini(model="gemini-2.5-flash-lite", retry_options=retry_config),
@@ -87,13 +88,13 @@ root_agent = Agent(
     tools=[google_search]
 )
 
-#**Step 3 — Run Queries**
+**Step 3 — Run Queries**
 
 Example:
 
 response = await ask_agent("What skills do I need for a junior data scientist role?")
 
-#**Step 4 — Resume Upload Workflow**
+**Step 4 — Resume Upload Workflow**
 
 Upload PDF to /kaggle/input/...
 
