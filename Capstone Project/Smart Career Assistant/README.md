@@ -4,6 +4,7 @@ This project implements an AI-powered Career Assistant Agent using Google ADK, G
 It analyzes resumes, extracts skills, retrieves real-time job market information, and generates personalized career guidance.
 
 **🚀 Project Features**
+
 **✅ 1. AI Career Assistant Agent**
 
 Built using google.adk.agents.Agent.
@@ -83,6 +84,7 @@ client = UserSecretsClient()
 GOOGLE_API_KEY = client.get_secret("GOOGLE_API_KEY")
 
 **Step 2 — Create the SmartCareer Agent**
+
 root_agent = Agent(
     name="smart_career_agent",
     model=Gemini(model="gemini-2.5-flash-lite", retry_options=retry_config),
@@ -104,6 +106,7 @@ Extract text with pdfplumber
 
 Process with the AI agent
 
+
 **📑 Skill Extraction Logic**
 
 The project includes a local Python tool:
@@ -113,15 +116,21 @@ SKILLS_DB = ["python", "sql", "aws", "tableau", ...]
 
 It finds all matching skills inside the resume text.
 
+
 **📈 Demo Outputs**
 
 The notebook includes demonstrations for:
 
 ✔ Career Q&A
+
 ✔ Resume Summary
+
 ✔ Job Role Matching
+
 ✔ Skill Extraction
+
 ✔ Salary Range Finder
+
 ✔ Cover Letter Generation
 
 **📄 PDF Resume Processing**
