@@ -1,160 +1,391 @@
-**Smart Career Assistant — Agents Project (Google ADK + Gemini)**
-
-This project implements an AI-powered Career Assistant Agent using Google ADK, Gemini 2.5 Flash, and tool calling.
-It analyzes resumes, extracts skills, retrieves real-time job market information, and generates personalized career guidance.
-
-**🚀 Project Features**
-
-**✅ 1. AI Career Assistant Agent**
-
-- Built using google.adk.agents.Agent.
-
-- Uses Gemini 2.5 Flash Lite model.
-
-- Provides professional answers in bullet points.
-
-**✅ 2. Resume Analyzer**
-
-- Extracts skills using a custom Python function.
-
-- Summarizes the resume.
-
-- Suggests suitable job roles.
-
-- Provides improvement recommendations.
-
-**✅ 3. Google Search Integration**
-
-- Uses google_search tool for:
-
-   - Skills trending in 2025
-
-   - Salary insights
-
-   - Market demand verification
-
-**✅ 4. Cover Letter Generator**
-
-- Generates short, professional cover letters based on extracted skills.
-
-**✅ 5. PDF Resume Upload & Parsing**
-
-- Upload a .pdf resume through Kaggle notebook.
-
-- Extract text using pdfplumber.
-
-- Automatically feed extracted text into the Agent.
-
-**📂 Project Structure**
-
-```
-📂 Project Structure
-├── Skill Extractor (Python Function)
-├── Smart Career Agent Setup
-│   ├── Gemini Model
-│   ├── google_search Tool
-│   ├── InMemoryRunner
-├── Demo Workflows
-│   ├── Career Guidance (Q&A)
-│   ├── Resume Analyzer
-│   ├── Salary Checker
-│   ├── Cover Letter Generator
-└── PDF Resume Upload Tools
-```
+# Smart-Career-Application Assistant (SCAA)
 
 
-**🛠️ Technologies Used**
+# Google × Kaggle Agents Intensive – Capstone Project
+# 🏆 Hackathon Writeup
+A simple and intelligent AI-powered career assistant that helps job seekers analyze their resume, extract skills, get job role recommendations, check market trends, and generate professional cover letters — all inside a single Kaggle Notebook.
+![Alt text](https://github.com/Priyanka651/Smart-career-application-capstone-project/blob/main/Images/SCAA.png?raw=true)
 
+# Team Members
+Priyanka
 
-- Python  
-- Google ADK (Agents Development Kit)  
-- Google Gemini 2.5 Flash Lite  
-- google_search tool  
-- pdfplumber (PDF text extraction)  
-- Kaggle Notebook environment  
+Monika Dhukia
 
-**📘 How It Works**
+Shrishti Yadav
 
-**Step 1 — Load API Key**
+# 🚀 Project Overview
+The Smart Career Application Assistant (SCAA) uses Google’s Agent Development Kit (ADK) and Gemini LLM to understand resumes and give helpful career guidance.
+The system automatically:
 
-Use Kaggle Secrets:
+📄 Reads and extracts text from a PDF resume
 
-```
-client = UserSecretsClient()
-GOOGLE_API_KEY = client.get_secret("GOOGLE_API_KEY")
-```
+🎯 Identifies technical & soft skills (custom Python skill extractor)
 
-**Step 2 — Create the SmartCareer Agent**
+💼 Suggests job roles matching the user profile
 
-```
-root_agent = Agent(
-    name="smart_career_agent",
-    model=Gemini(model="gemini-2.5-flash-lite", retry_options=retry_config),
-    instruction=career_instruction,
-    tools=[google_search]
-)
-```
+📊 Retrieves real-time job market trends using Google Search
 
-**Step 3 — Run Queries**
+✍️ Generates a short, personalized cover letter
 
-Example:
+🧩 Provides resume improvement suggestions
 
-```
-response = await ask_agent("What skills do I need for a junior data scientist role?")
-```
+ ✍️ This makes the job preparation process much faster and easier.
+ 
+⭐ This turns hours of manual research into a 60-second automated process.
 
-**Step 4 — Resume Upload Workflow**
+# Problem Statement
+- Job seekers often struggle with:
 
-- Upload PDF to /kaggle/input/...
+- Understanding what their resume communicates
 
-- Extract text with pdfplumber
+- Identifying their strongest skills
 
-- Process with the AI agent
+- Matching themselves to the right job roles
 
+- Researching market trends, salaries, and in-demand skills
 
-**📑 Skill Extraction Logic**
+- Writing a clean, professional cover letter
 
-The project includes a local Python tool:
+- The process is slow, confusing, and often leads to missed opportunities.
 
-```
-SKILLS_DB = ["python", "sql", "aws", "tableau", ...]
-```
+# ⭐ SCAA Solve this:
+⚡ Saves Time
+Instantly analyzes a resume and provides structured insights.
 
+🎯 Accurate Skill Extraction
+Custom Python extractor identifies relevant technical & soft skills.
 
-It finds all matching skills inside the resume text.
+💼 Personalized Role Recommendations
+Suggests accurate job roles based on identified skills.
 
+🌐 Real-Time Market Insights
+With google_search, it retrieves:
 
-**📈 Demo Outputs**
+- In-demand skills
 
-The notebook includes demonstrations for:
+- Salary ranges
 
-✔ Career Q&A
+- Job market requirements
 
-✔ Resume Summary
+📝 Resume Improvement Tips
+Highlights missing elements and improvement areas.
 
-✔ Job Role Matching
+✍️ Auto Cover Letter Generation
+Creates a clean, professional cover letter in seconds.
 
-✔ Skill Extraction
+💻 Easy to Use
+Runs entirely inside Kaggle Notebook — no setup required.
 
-✔ Salary Range Finder
+🤝 Practical & Real-World Friendly
+Works like a fast, AI-driven career counselor.
 
-✔ Cover Letter Generation
+# 🧠 How It Works
 
-**📄 PDF Resume Processing**
+1️⃣ Upload Resume (PDF)
 
-Upload PDF → Extract Text → Analyze with AI Agent.
+The system uses pdfplumber to extract resume text.
+
+2️⃣ Extract Skills
+
+A custom Python script compares resume text with a pre-built skills list.
+
+3️⃣ ADK Agent + Gemini Analysis
+
+The agent produces:
+
+- Key skills
+
+- Candidate summary
+
+- Suitable job roles
+
+- Resume improvement suggestions
+
+4️⃣ Google Search Tool
+
+Fetches real-time insights:
+
+- Trending skills in 2025
+
+- Salary expectations
+
+- Market demand
+
+5️⃣ Cover Letter Generation
+
+Gemini creates a personalized cover letter based on skills + summary.
+
+6️⃣ Display Results
+
+All outputs show cleanly inside the notebook.
+
+![Alt text](https://github.com/Priyanka651/Smart-career-application-capstone-project/blob/main/Images/aB7_ojfFXqI3JpdkMLaE8.png).
+# 🛠 Technologies Used
+1.Google ADK (Agent Development Kit).
+
+2.Gemini 2.5 Flash Lite.
+
+3.google_search Tool.
+
+4.Python.
+
+5.pdfplumber (for PDF extraction).
+
+6.Kaggle Notebook environment.
+
+# 📂 Project Structure
 
 ```
-resume_path = "/kaggle/input/.../resume.pdf"
+Smart-career-application/
+│
+├── notebooks/
+│   └── SCAA_notebook.ipynb        # Main Kaggle notebook
+│
+├── data/
+│   └── sample_resume.pdf          # Demo PDF for testing
+│
+├── Images/
+│   ├── SCAA.png
+│   └── flowchart.png
+│
+├── README.md                      # Project documentation
+└── requirements.txt               # Required libraries
+
+```
+
+# 📦 Requirements
+
+This project requires the following Python libraries:
+
+```
+google-adk
+google-genai
+pdfplumber
+pandas
+numpy
+kaggle_secrets
+
+```
+All libraries are pre-installed in Kaggle notebooks.
+No local installation is required.
+
+# ▶️ How to Run the Project
+
+1. Upload your resume PDF to Kaggle.
+
+2. Run the notebook cells in order.
+
+3. The system will:
+
+- Extract skills
+
+- Summarize your profile
+
+- Recommend job roles
+
+- Retrieve market insights
+
+- Generate a cover letter
+
+All results appear directly in notebook output cells.
+
+# 🎯 Key Features
+
+✔ Resume understanding
+
+✔ Skill extraction
+
+✔ Job role recommendations
+
+✔ Resume improvement tips
+
+✔ Market insights using Google Search
+
+✔ Auto-generated cover letter
+
+✔ Runs fully in Kaggle Notebook
+
+# ⭐ Architecture Overview
+
+The Smart Career Application Assistant (SCAA) follows a modular pipeline architecture combining PDF processing, custom tools, LLM reasoning, and external search integration.
+
+The architecture includes the following major components:
+
+# A. Input Layer
+
+User provides a PDF resume uploaded to Kaggle.
+
+The system extracts raw text using pdfplumber.
+
+# B. Preprocessing Layer
+
+A custom Python skill extractor identifies relevant skills from the resume text using a predefined skills database.
+
+The extracted skills are passed into the agent prompt for structured reasoning.
+
+# C. AI Agent Layer (ADK + Gemini)
+
+A single ADK agent powered by Gemini 2.5 Flash Lite processes:
+
+- Resume summary
+
+- Job recommendations
+
+- Resume improvement suggestions
+
+- Market insights
+
+# D. Tool Integration Layer
+
+- google_search tool extends the agent with real-time data access.
+
+- Retrieves trending skills
+
+- Fetches salary expectations
+
+- Finds job role requirements
+
+# E. Output Generation Layer
+
+The agent produces:
+
+- Key skills
+
+- Summary of candidate
+
+- Suggested job roles
+
+- Resume improvement tips
+
+- In-demand skills
+
+- Market salary trends
+
+- Professional cover letter
+
+# F. Notebook Interface Layer
+
+All components run inside a Kaggle Notebook.
+
+Results are displayed to the user in structured, easy-to-read outputs.
+
+# 🧬 Agent Prompt Template
+
+```
+You are a Smart Career Application Assistant.
+
+Given resume text and extracted skills:
+1. Summarize the candidate profile
+2. Identify strengths and missing skills
+3. Recommend suitable job roles
+4. Suggest improvements for the resume
+5. Retrieve market insights using google_search
+6. Generate a short professional cover letter
+
+```
+
+# ⭐ 2. Architecture Summary
+
+The Smart Career Application Assistant (SCAA) is an intelligent resume analysis system built using Google’s Agent Development Kit (ADK) and Gemini models. It automates the job preparation process by reading a resume, extracting skills, recommending suitable job roles, analyzing market demand, suggesting resume improvements, and generating professional cover letters.
+
+The project integrates:
+
+- PDF text extraction
+
+- Custom skill-extraction tool
+
+- LLM-powered reasoning
+
+- Real-time search using google_search
+
+- Comprehensive career guidance pipeline
+
+- SCAA helps job seekers save time, get personalized insights, and make better career decisions with accurate, AI-driven recommendations.
+
+# (Plan → Quiz → Evaluate → Predict Weakness → Revise → Adapt Next)
+SCAA plans the analysis, quizzes the resume, evaluates skills, predicts weaknesses, revises recommendations, and adapts its outputs to provide accurate, personalized career guidance.
+
+# 🧪 Sample Outputs
+
+```
+#Demo 4: Cover Letter Generator
+name = "Priyanka"
+target_role = "Junior Data Scientist"
+skills_list = extract_skills(resume_text)
+
+prompt = f"""
+Write a short, professional cover letter for {name} applying to a {target_role} role.
+
+Use these skills: {skills_list}
+
+Structure:
+- 1 short intro paragraph
+- 1 paragraph about skills + impact
+- 1 closing paragraph
+
+Keep it under 200 words.
+"""
+
+response = await ask_agent(prompt)
+print_final_answer(response)
+```
+
+![Alt text](https://github.com/Priyanka651/Smart-career-application-capstone-project/blob/main/Images/Cover_letter_generated.png)
+
+
+```
+import pdfplumber
+
+resume_path = "/kaggle/input/resumemain/resumeidea.pdf"
+
+def load_resume_from_pdf(path):
+    try:
+        with pdfplumber.open(path) as pdf:
+            text = ""
+            for page in pdf.pages:
+                extracted = page.extract_text()
+                if extracted:
+                    text += extracted + "\n"
+        return text
+    except Exception as e:
+        print("Error reading resume:", e)
+        return None
+
 resume_text = load_resume_from_pdf(resume_path)
+
+print("=== RESUME TEXT EXTRACTED ===\n")
+print(resume_text[:1500])   # show first part only
 ```
 
-**🔮 Future Improvements**
 
-- Add job description matching
+![Alt text](https://github.com/Priyanka651/Smart-career-application-capstone-project/blob/main/Images/Resume_Text_Extracted.png)
 
-- Add streamlit web UI
 
-- Use vector database + RAG for long resumes
 
-- Build automated resume scoring system
+# ⭐ Flowchart Diagram
+![Alt text](https://github.com/Priyanka651/Smart-career-application-capstone-project/blob/main/Images/flowchart.png?raw=true)
+
+# ⚠️ Limitations
+- Works best with English-language resumes
+
+- PDF extraction quality depends on resume formatting
+
+- google_search accuracy may vary by region
+
+- Not a replacement for professional career counseling
+
+# 📌 Future Improvements
+
+- Adding multi-agent workflow
+
+- Adding memory for user history
+
+- Deploying a simple web UI
+
+- Creating job–resume match scoring 
+
+## 🏆 Status
+
+✔ Completed for Google × Kaggle Agents Intensive Capstone
+✔ Includes full system documentation
+✔ Ready for demo & submission
