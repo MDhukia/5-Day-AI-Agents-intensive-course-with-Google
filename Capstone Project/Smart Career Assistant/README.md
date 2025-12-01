@@ -301,6 +301,8 @@ SCAA plans the analysis, quizzes the resume, evaluates skills, predicts weakness
 
 # 🧪 Sample Outputs
 
+# Cover Letter Generator
+
 ```
 #Demo 4: Cover Letter Generator
 name = "Priyanka"
@@ -320,14 +322,15 @@ Structure:
 Keep it under 200 words.
 """
 
-# Output:
-
 response = await ask_agent(prompt)
 print_final_answer(response)
 ```
 
+# Output:
+
 ![Alt text](https://github.com/Priyanka651/Smart-career-application-capstone-project/blob/main/Images/Cover_letter_generated.png)
 
+# RESUME TEXT EXTRACTED
 
 ```
 import pdfplumber
