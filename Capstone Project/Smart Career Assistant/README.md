@@ -6,12 +6,6 @@
 A simple and intelligent AI-powered career assistant that helps job seekers analyze their resume, extract skills, get job role recommendations, check market trends, and generate professional cover letters — all inside a single Kaggle Notebook.
 ![Alt text](https://github.com/Priyanka651/Smart-career-application-capstone-project/blob/main/Images/SCAA.png?raw=true)
 
-# Team Members
-Priyanka
-
-Monika Dhukia
-
-Shrishti Yadav
 
 # 🚀 Project Overview
 The Smart Career Application Assistant (SCAA) uses Google’s Agent Development Kit (ADK) and Gemini LLM to understand resumes and give helpful career guidance.
@@ -326,6 +320,8 @@ Structure:
 Keep it under 200 words.
 """
 
+# Output:
+
 response = await ask_agent(prompt)
 print_final_answer(response)
 ```
@@ -356,6 +352,8 @@ resume_text = load_resume_from_pdf(resume_path)
 print("=== RESUME TEXT EXTRACTED ===\n")
 print(resume_text[:1500])   # show first part only
 ```
+
+# Output:
 
 
 ![Alt text](https://github.com/Priyanka651/Smart-career-application-capstone-project/blob/main/Images/Resume_Text_Extracted.png)
